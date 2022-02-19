@@ -1,0 +1,84 @@
+Small = int(15)
+Medium = int(20)
+Large = int(25)
+Topping1 = int(2)
+Topping2 = int(3)
+Extra = int(1)
+
+print ("Welcome to Funmi's Pizza House!!")
+print (' ')
+print('Please select your preferences')
+print('1.Small size = $15')
+print('2.Medium size = $20')
+print('3.Large size = $25')
+
+
+Pizza_size = input ('What size of pizza do you want?: ')
+if Pizza_size == '1':
+  print (f'Bill is ${Small}')
+elif Pizza_size == '2':
+  print (f'Bill is ${Medium}')
+elif Pizza_size == '3':
+  print (f'Bill is ${Large}')
+else:
+  print ('Invalid operation')
+
+print (' ')
+print ('**Pepperoni for small size = $2')
+print ('**Pepperoni for medium and large size = $3')
+print ('**Extra cheese = 1$')
+
+print(' ')
+Toppings = input ('Would you like topings? Please reply with Y/N: ')
+Toppings.capitalize()
+
+if Toppings == 'Y' and Pizza_size == '1':
+  print ("Bill is $",(Small + Topping1))
+
+elif Toppings == 'Y' and Pizza_size == '2':
+  print ("Bill is $",(Medium + Topping2))
+
+elif Toppings == 'Y' and Pizza_size == '3':
+  print ("Bill is $",(Large + Topping2))
+  
+elif Toppings == 'N' and Pizza_size == '1':
+  print (f'Bill is ${Small}')
+  
+elif Toppings == 'N' and Pizza_size == '2':
+  print (f'Bill is ${Medium}')
+  
+elif Toppings == 'N' and Pizza_size == '3':
+  print (f'Bill is ${Large}')
+  
+print(' ')
+Cheese = input ('Would you like extra cheese? Please reply   with Y/N: ')
+Cheese.capitalize()
+if Cheese == 'Y' and Toppings == 'Y' and Pizza_size == '1':
+  print ('Total Bill is $',(Small + Topping1 + Extra))
+elif Cheese == 'Y' and Toppings == 'Y' and Pizza_size == '2':
+  print ('Total Bill is $',(Medium + Topping2 + Extra))
+elif Cheese == 'Y' and Toppings == 'Y' and Pizza_size == '3':
+  print ('Total Bill is $',(Large + Topping2 + Extra))
+elif Cheese == 'Y' and Toppings == 'N' and Pizza_size == '1':
+  print ('Total Bill is $',(Small + Extra))
+elif Cheese == 'Y' and Toppings == 'N' and Pizza_size == '2':
+  print ('Total Bill is $',(Medium + Extra))
+elif Cheese == 'Y' and Toppings == 'N' and Pizza_size == '3':
+  print ('Total Bill is $',(Large + Extra))
+elif Cheese == 'N' and Toppings == 'Y' and Pizza_size == '1':
+  print ('Total Bill is $',(Small + Topping1))
+elif Cheese == 'N' and Toppings == 'Y' and Pizza_size == '2':
+  print ('Total Bill is $',(Medium + Topping2))  
+elif Cheese == 'N' and Toppings == 'Y' and Pizza_size == '3':
+  print ('Total Bill is $',(Large + Topping2))
+elif Cheese == 'N' and Toppings == 'Y' and Pizza_size == '1':
+  print (f'Total Bill is ${Small}')
+elif Cheese == 'N' and Toppings == 'N' and Pizza_size == '2':
+  print (f'Total Bill is ${Medium}') 
+elif Cheese == 'N' and Toppings == 'N' and Pizza_size == '3':
+  print (f'Total Bill is ${Large}')
+  
+print (' ') 
+print('Thanks for your purchase!')
+    
+
